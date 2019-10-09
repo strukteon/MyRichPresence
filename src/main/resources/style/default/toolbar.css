@@ -1,0 +1,45 @@
+@font-face {
+    font-family: lololol;
+    src: url('../Discordia.otf');
+}
+
+.toolbar {
+    -fx-background-color: #202225;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.minimize-button, .close-button {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-style: none;
+}
+
+.minimize-button {
+    -fx-background-color: none;
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+
+.minimize-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+    -fx-background-color: none;
+    -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+
+.close-button:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #F04747;
+}
+
+.title {
+    -fx-font-family: "My Font Regular";
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 0 0 0 8;
+}

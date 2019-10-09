@@ -1,0 +1,13 @@
+.text-field {
+    -fx-background-color: rgba(0, 0, 0, 0.0980392);
+    -fx-border-color: rgba(0, 0, 0, 0.298039);
+    -fx-border-radius: 3;
+}
+
+.text-field:hover {
+    -fx-border-color: black;
+}
+
+.text-field:focused {
+    -fx-border-color: #7289DA;
+}

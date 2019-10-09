@@ -1,0 +1,40 @@
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: #202225;
+}
+
+.text-area .content {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #313439;
+}
+
+/* The main scrollbar CSS class of ListView */
+.text-area .scroll-bar:horizontal ,
+.text-area  .scroll-bar:vertical{
+    -fx-background-color: transparent;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.text-area .increment-button ,.text-area .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* The main scrollbar **track** CSS class  */
+.text-area .scroll-bar:horizontal .track ,
+.text-area .scroll-bar:vertical .track{
+    -fx-background-color: derive(#434343, 20%);
+
+    -fx-opacity: 0.2;
+    -fx-background-radius: 0em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.text-area .scroll-bar:horizontal .thumb,
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(black,50%);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 1em;
+
+}

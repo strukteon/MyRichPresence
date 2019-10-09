@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<StackPane prefHeight="700.0" prefWidth="500.0" styleClass="content" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutY="-60.0" prefHeight="568.0" prefWidth="482.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <GridPane prefHeight="477.0" prefWidth="482.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" text="Mode">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <ChoiceBox fx:id="cb_mode" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="bt_download_ext" alignment="CENTER" mnemonicParsing="false" text="Download Extension">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="lb_profile" text="Profile">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <ChoiceBox fx:id="cb_profiles" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin>
+                                          </ChoiceBox>
+                                          <Button fx:id="bt_add_profile" mnemonicParsing="false" text="Add">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="bt_remove_profile" disable="true" mnemonicParsing="false" text="Remove" />
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="382.0" styleClass="seperator">
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Label fx:id="lb_details" layoutX="10.0" layoutY="109.0" text="Details">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="tf_details" layoutX="10.0" layoutY="130.0" />
+                                    <Label fx:id="lb_state" layoutX="10.0" layoutY="10.0" text="State">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="tf_state" />
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </Separator>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <CheckBox fx:id="ch_show_timer" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Show timer" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin></CheckBox>
+                                          <Button fx:id="bt_timer_settings" disable="true" mnemonicParsing="false" text="Settings" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding></Separator>
+                                    <Label fx:id="lb_group" text="Group">
+                                       <VBox.margin>
+                                          <Insets left="4.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lb_group_cur" text="Current Players" />
+                                                <TextField fx:id="tf_group_cur" />
+                                             </children>
+                                             <padding>
+                                                <Insets right="4.0" />
+                                             </padding></VBox>
+                                          <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lb_group_max" text="Maximum Players" />
+                                                <TextField fx:id="tf_group_max" />
+                                             </children>
+                                             <padding>
+                                                <Insets left="4.0" />
+                                             </padding></VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label fx:id="lb_view_preview_pg1" text="Want to see a preview before going live?">
+                                       <HBox.margin>
+                                          <Insets right="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="bt_view_preview_pg1" mnemonicParsing="false" text="Click here" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Button fx:id="bt_stop_presence" cancelButton="true" mnemonicParsing="false" styleClass="warning-button" text="Stop Presence" />
+                                    <Button fx:id="bt_update_presence" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Start Presence" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="8.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Advanced">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <GridPane prefHeight="477.0" prefWidth="482.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="lb_app_id" text="Application">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="tf_app_id" promptText="Application ID" />
+                                    <HBox alignment="CENTER" disable="true" maxHeight="0.0" minHeight="0.0" visible="false">
+                                       <children>
+                                          <ChoiceBox fx:id="cb_application" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="bt_add_application" mnemonicParsing="false" text="+">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="bt_remove_application" mnemonicParsing="false" text="-">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </VBox.margin>
+                                    </Separator>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="bt_add_image" mnemonicParsing="false" text="Add image">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="bt_remove_image" disable="true" mnemonicParsing="false" text="Remove image">
+                                             <HBox.margin>
+                                                <Insets right="8.0" />
+                                             </HBox.margin></Button>
+                                          <Button fx:id="bt_remove_all_images" mnemonicParsing="false" text="Remove all" />
+                                       </children>
+                                    </HBox>
+                                    <Separator prefWidth="382.0" styleClass="seperator">
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Label fx:id="lb_large_img" layoutX="10.0" layoutY="10.0" text="Large image">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <VBox>
+                                       <children>
+                                          <CheckBox fx:id="ch_large_img_enabled" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Large image enabled" />
+                                          <ChoiceBox fx:id="cb_large_image" maxWidth="1.7976931348623157E308">
+                                             <VBox.margin>
+                                                <Insets top="4.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="tf_large_image" promptText="Large image text">
+                                             <VBox.margin>
+                                                <Insets top="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </VBox>
+                                    <Separator prefWidth="382.0" styleClass="seperator">
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Label fx:id="lb_small_img" layoutX="10.0" layoutY="151.0" text="Small image">
+                                       <padding>
+                                          <Insets bottom="4.0" left="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <VBox layoutX="18.0" layoutY="172.0">
+                                       <children>
+                                          <CheckBox fx:id="ch_small_img_enabled" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Small image enabled" />
+                                          <ChoiceBox fx:id="cb_small_image" maxWidth="1.7976931348623157E308">
+                                             <VBox.margin>
+                                                <Insets top="4.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="tf_small_image" promptText="Small image text">
+                                             <VBox.margin>
+                                                <Insets top="4.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" visible="false">
+                                       <padding>
+                                          <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Button fx:id="bt_export_to_jar" disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Export to external jar" visible="false" />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="lb_view_preview_pg2" text="Want to see a preview before going live?">
+                                       <HBox.margin>
+                                          <Insets right="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="bt_view_preview_pg2" mnemonicParsing="false" text="Click here" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Settings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="669.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="lb_version" maxWidth="1.7976931348623157E308" text="Version ?" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="bt_check_updates" mnemonicParsing="false" text="Check for updates" />
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <CheckBox fx:id="ch_minimize_to_taskbar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Minimize to taskbar">
+                                       <tooltip>
+                                          <Tooltip text="Minimizes to taskbar when closed" />
+                                       </tooltip></CheckBox>
+                                    <CheckBox fx:id="ch_resizable" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Resizable">
+                                       <VBox.margin>
+                                          <Insets top="8.0" />
+                                       </VBox.margin>
+                                       <tooltip>
+                                          <Tooltip text="Make the window resizable (requires restart)" />
+                                       </tooltip>
+                                    </CheckBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Button fx:id="bt_donate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Support the creator">
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="bt_tutorial" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="How to make an application">
+                                       <VBox.margin>
+                                          <Insets bottom="8.0" left="8.0" right="8.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Debug Log">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="ta_debug_log" editable="false" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="wv_update_log" text="Update Log">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView fx:id="wv_update_log" layoutX="140.0" layoutY="89.0" prefHeight="671.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>

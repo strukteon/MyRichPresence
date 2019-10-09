@@ -1,0 +1,11 @@
+.progress-bar > .track {
+    /*-fx-text-box-border: rgba(0, 0, 0, 0.0980392);
+    -fx-control-inner-background: rgba(0, 0, 0, 0.0980392);*/
+    -fx-border-color: #202225;
+    -fx-border-radius: 3;
+    -fx-background-color: rgba(0, 0, 0, 0.0980392);
+}
+
+.progress-bar {
+    -fx-accent: #7289DA;
+}

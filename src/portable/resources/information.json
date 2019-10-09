@@ -1,0 +1,23 @@
+{
+  "title": "Krasser titel yo",
+  "author": "itsa me, mario",
+  "profileName": "Default",
+  "appId": "401775087440756737",
+  "details": "Default profile",
+  "state": "https://strukteon.net",
+  "showTimer": false,
+  "isCountingUp": true,
+  "countdownSeconds": 0,
+  "curPlayers": 0,
+  "maxPlayers": 0,
+  "largeImage": {
+    "enabled": false,
+    "imageKey": "",
+    "imageText": ""
+  },
+  "smallImage": {
+    "enabled": false,
+    "imageKey": "",
+    "imageText": ""
+  }
+}

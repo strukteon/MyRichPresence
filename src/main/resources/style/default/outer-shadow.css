@@ -1,0 +1,24 @@
+@font-face {
+    src: url('../OpenSans-Regular.ttf');
+}
+
+@font-face {
+    src: url("../OpenSans-SemiBold.ttf");
+}
+
+.content {
+    -fx-background-color: #36393F;
+    -fx-text-fill: white;
+}
+
+.root {
+    -fx-background-color: transparent;
+    -fx-padding: 20 20 20 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0.0, 0.0);
+}
+
+.label {
+    -fx-font-family: "Open Sans SemiBold";
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}

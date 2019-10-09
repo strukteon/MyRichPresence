@@ -1,0 +1,20 @@
+.tab-pane * {
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: rgba(0, 0, 0, .2);
+}
+
+.tab-pane .tab {
+    -fx-border-color: none;
+    -fx-background-color: #36393F;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #7289da;
+}
+
+.tab-pane .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}

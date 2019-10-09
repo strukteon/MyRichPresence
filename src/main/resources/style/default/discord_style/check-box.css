@@ -1,0 +1,22 @@
+.check-box {
+    -fx-cursor: hand;
+    -fx-padding: 8 8 8 8;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #202225;
+    -fx-background-color: rgba(32, 34, 37, .3);
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 3;
+}
+
+.check-box:selected {
+    -fx-border-color: #7289DA;
+}
+
+.check-box:selected .box {
+    -fx-background-color: white;
+}

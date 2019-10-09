@@ -1,0 +1,36 @@
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: #7289da;
+    -fx-font-family: "Open Sans Regular";
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 3;
+}
+
+.button:hover {
+    -fx-background-color: #677BC4;
+}
+
+.button:pressed {
+    -fx-background-color: #5B6EAE;
+}
+
+.warning-button {
+    -fx-text-fill: red;
+    -fx-background-color: transparent;
+    -fx-font-family: "Open Sans Regular";
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 3;
+    -fx-border-color: rgba(255, 0, 0, 0.34);
+}
+
+.warning-button:hover {
+    -fx-border-color: rgba(255, 0, 0, 0.67);
+    -fx-background-color: transparent;
+}
+
+.warning-button:pressed {
+    -fx-border-color: red;
+    -fx-background-color: rgba(255, 0, 0, 0.1);
+}

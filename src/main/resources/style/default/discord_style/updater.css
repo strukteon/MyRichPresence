@@ -1,0 +1,7 @@
+.root {
+    -fx-background-color: #36393F;
+}
+
+* {
+    -fx-text-fill: white;
+}
